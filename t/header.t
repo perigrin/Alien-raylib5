@@ -1,17 +1,19 @@
 # Initialize and destroy an instance to the library
 use Test2::Bundle::More;
 use Test::Alien 0.05;
-use Alien::raylib;
+use Alien::raylib5;
 
 # windows.h (included via perl.h) and the raylib.h header clash,
 # thus skip this test
-skip_all "Test skipped" if 1 or $^O eq 'MSWin32' and not $ENV{ALIEN_RAYLIB_FORCE_TEST_HEADER};
+skip_all "Test skipped"
+  if 1
+  or $^O eq 'MSWin32' and not $ENV{ALIEN_RAYLIB_FORCE_TEST_HEADER};
 
-alien_ok 'Alien::raylib';
+alien_ok 'Alien::raylib5';
 my $xs = do { local $/; <DATA> };
 diag "Trying out GetRandomValue via header";
-xs_ok {xs => $xs, verbose => 1}, with_subtest {
-    my $r = My::Raylib::xs_rand(42, 45);
+xs_ok { xs => $xs, verbose => 1 }, with_subtest {
+    my $r = My::Raylib::xs_rand( 42, 45 );
     ok 42 <= $r && $r <= 45;
 
 };

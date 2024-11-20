@@ -7,8 +7,8 @@ use 5.008;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Alien distribution for Raylib",
-  "AUTHOR" => "Ahmad Fatoum <athreef\@cpan.org>",
+  "ABSTRACT" => "Alien distribution for raylib",
+  "AUTHOR" => "Chris Prather <chris at prather.org>",
   "BUILD_REQUIRES" => {
     "Alien::Build" => "0.32",
     "Alien::Build::MM" => "0.32",
@@ -20,10 +20,10 @@ my %WriteMakefileArgs = (
     "Alien::Build::Plugin::Build::CMake" => "0.99",
     "ExtUtils::MakeMaker" => "6.52"
   },
-  "DISTNAME" => "Alien-raylib",
+  "DISTNAME" => "Alien-raylib5",
   "LICENSE" => "perl",
   "MIN_PERL_VERSION" => "5.008",
-  "NAME" => "Alien::raylib",
+  "NAME" => "Alien::raylib5",
   "PREREQ_PM" => {},
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.52",
@@ -82,4 +82,3 @@ WriteMakefile(%WriteMakefileArgs);
   }
 }
 # END code inserted by Dist::Zilla::Plugin::AlienBuild
-
