@@ -24,10 +24,8 @@ share {
           '-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON',
           '-DCMAKE_INSTALL_LIBDIR:PATH=lib',
           @CMAKE_ARGS, '.'],
-
-
-        '%{cmake} --build .',
-        '%{cmake} --build . --target install'
+        [qw(%{cmake} --build .)],
+        [qw(%{cmake} --build . --target install)],
     ];
 
     plugin 'Gather::IsolateDynamic' => ();
