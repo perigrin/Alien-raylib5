@@ -17,7 +17,6 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.039",
             "Alien::Build" : "2.84"
          }
       },
@@ -30,11 +29,11 @@
    "provides" : {
       "Alien::raylib5" : {
          "file" : "lib/Alien/raylib5.pm",
-         "version" : "0.026"
+         "version" : "0.01"
       }
    },
    "release_status" : "stable",
-   "version" : "0.026",
+   "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 4.16",
    "x_spdx_expression" : "Artistic-1.0-Perl OR GPL-1.0-or-later"
 }

@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package Alien::raylib5;
-our $VERSION = '0.026'; # VERSION
+our $VERSION = '0.01'; # VERSION
 
 use parent 'Alien::Base';
 
@@ -22,7 +22,7 @@ Alien distribution for Raylib version 5.5
 
 =head1 VERSION
 
-version 0.026
+version 0.01
 
 =head1 USAGE
 
